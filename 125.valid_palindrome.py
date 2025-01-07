@@ -43,9 +43,10 @@ class Solution:
         return True
         
         """
-        pattern = "[^\w]"
-        # pattern = "[^a-zA-z0-9]"
-        reverse_s = re.sub(pattern=pattern,repl="",string=s).lower()
+        # pattern = "[\W]"
+        s = s.lower()
+        pattern = "[^a-z0-9]"
+        reverse_s = re.sub(pattern,"",s)
         print(reverse_s)
         l = 0
         r = len(reverse_s) - 1
